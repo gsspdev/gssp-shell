@@ -1,7 +1,7 @@
 1. install poetry if it is not already installed
-2. run 'poetry install' to install the dependencies
-3. echo "OPENAPI_KEY = sk-pasteyouropenaikeyhere" > keys.py
-4. make gssp-shell executable with 'chmod +x gssp-shell'
-5. (optional) add gssp-shell root directory to your $PATH 
-5. (optional) edit the prompts.py file to configure a custom prompt for the shell
-6. run 'gssp-shell' to start the shell
+2. $ poetry install -- installs dependencies
+3. $ echo "OPENAPI_KEY = 'sk-pasteyouropenaikeyhere'" > keys.py -- replace 'sk-pasteyouropenaikeyhere' with an active OpenAI key from (you can generate a new one from https://platform.openai.com/account/api-keys)
+4. $ chmod +x gssp-shell -- make gssp-shell executable so it can be run from the command line
+5. (optional) add gssp-shell root directory to your $PATH -- allows gssp-shell to be called from anywhere on the os
+6. (optional) edit the prompts.py file -- configure your own custom prompt
+7. $ gssp-shell -- if you did step 5 you may run this command from anywhere on the os; if you didn't, call it from the projects root directory
