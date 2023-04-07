@@ -14,7 +14,7 @@ WINDOWS = platform.system() == "Windows"
 openai.api_key = OPENAI_KEY
 MAX_PROMPT = 4096
 CONTEXT_LEFT, CONTEXT_RIGHT = '{', '}'
-gssp-shell_PREVIX = lambda: Style.RESET_ALL + os.getcwd() + ' ' + Style.RESET_ALL + Fore.MAGENTA + "gssp-shell" + Style.RESET_ALL + '>'
+GSSP_SHELL_PREVIX = lambda: Style.RESET_ALL + os.getcwd() + ' ' + Style.RESET_ALL + Fore.MAGENTA + "gssp-shell" + Style.RESET_ALL + '>'
 API_CALLS_PER_MIN = 50
 VERBOSE = False
 MAX_DEBUG_ATTEMPTS = 2
@@ -22,7 +22,7 @@ RETRY_ERRORS = ["The server had an error while processing your request. Sorry ab
 memory = []
 
 def print_console_prompt():
-    print(gssp-shell_PREVIX(), end="")
+    print(GSSP_SHELL_PREVIX(), end="")
 
 def print_status(status):
     print_console_prompt()
@@ -161,7 +161,7 @@ if __name__ == "__main__":
     else:
         always_llm = False
     clear_memory()
-    while user_input := input(gssp-shell_PREVIX()):
+    while user_input := input(GSSP_SHELL_PREVIX()):
         if user_input == 'clear':
             clear_memory()
             os.system("cls" if WINDOWS else "clear")
